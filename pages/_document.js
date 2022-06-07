@@ -10,7 +10,7 @@ export default function Document() {
       </Head>
       <body className=''>
          <Nav />
-         <div className='pt-24'>
+         <div className='pt-24 pl-35' style={{border: "solid 1px lime"}}>
           <Main />
          </div>
         <NextScript />

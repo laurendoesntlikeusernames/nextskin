@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+}
+
+#mapForm {
+  height: 400px;
+  width: 400px;
+}

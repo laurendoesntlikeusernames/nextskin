@@ -6,12 +6,15 @@ export default function Home({ isConnected }) {
     <div >
       <Head>
         <title>Maps, Map, Map</title>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-
       </Head>
-      <main className='h-screen'>
-      
-        <h1>The Map Thing</h1>
+      <main className='flex grid container mx-auto px-4' style={{border: "solid 1px pink"}}>
+        
+        <div className='grid grid-rows-1'> <header className='' style={{border: "solid 1px blue"}}>The Map Thing</header></div>
+
+        <div className='flex flex-rows-2 px-8 mx-auto' style={{border: "solid 1px purple"}}>
+          <div className='' id='map'style={{border: "solid 1px green"}} ></div>
+          <div className='' id='mapForm'style={{border: "solid 1px orange"}} ></div>
+        </div>
                   
       </main>
 
