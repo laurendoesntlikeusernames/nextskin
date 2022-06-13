@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +19,9 @@ a {
   box-sizing: border-box;
 }
 
-#map {
-  height: 400px;
-  width: 400px;
+.green {
+  @apply bg-gray-100 text-red-900 border-red-900;
 }
 
-#mapForm {
-  height: 400px;
-  width: 400px;
-}
+
+

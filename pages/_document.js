@@ -10,16 +10,16 @@ export default function Document() {
       </Head>
       <body className=''>
          <Nav />
-         <div className='pt-24 pl-35' style={{border: "solid 1px lime"}}>
+         <div className='pt-24 pl-35'>
           <Main />
          </div>
         <NextScript />
         <footer className="">
-            <div className="grid justify-items-center" style={{border:"solid 1px grey"}}>
+            <div className="grid justify-items-center">
                 <a href="#" target="_blank" rel="noopener noreferrer" style={{display: "flex",}} >
-                    <p>Powered by&nbsp;</p>
-                    <img src="/spaghetti-ink.png" alt="Vercel Logo" className="logo"  style={{width:"25px",}}/>
-                    <p>&nbsp;Spaghetti INK</p> 
+                    <p className='text-sm' style={{fontWeight: 'bold'}} >Powered by&nbsp;</p>
+                    <img src="/spaghetti-ink.png" alt="Vercel Logo" className="logo"  style={{width:"23px",}}/>
+                    <p className='text-sm' style={{fontWeight: 'bold'}}>&nbsp;Spaghetti INK</p> 
                 </a>
             </div>
         </footer>
