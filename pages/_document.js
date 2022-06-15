@@ -1,5 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Nav from '../components/nav'
+import settings from "../settings";
+
 
 export default function Document() {
   return (
@@ -7,6 +9,10 @@ export default function Document() {
       <Head>  
         <link rel="icon" href="/favicon.ico" />
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+        <script
+            src={`https://maps.googleapis.com/maps/api/js?key=${settings?.googleMaps?.apiKey}&callback=initMap&libraries=&v=weekly`}
+            async
+          ></script>
       </Head>
       <body className=''>
          <Nav />

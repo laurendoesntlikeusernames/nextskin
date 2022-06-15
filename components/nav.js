@@ -10,7 +10,7 @@ const links = [
 }))
 
 const Nav = () => (
-    <nav id="header" className="fixed w-full z-30 top-0 text-black">
+    <nav id="header" className="fixed w-full z-30 top-0 text-black bg-white">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
           <a className="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-2xl" href="#" style={{display: "flex",}} >
@@ -40,12 +40,12 @@ const Nav = () => (
               <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li>
           </ul>
-          <button
-            id="navAction"
-            className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            Action
-          </button>
+          <Link href="/map">
+            <a className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            >
+              Map
+            </a>
+          </Link>
         </div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />

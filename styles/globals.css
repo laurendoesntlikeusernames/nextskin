@@ -19,9 +19,14 @@ a {
   box-sizing: border-box;
 }
 
-.green {
-  @apply bg-gray-100 text-red-900 border-red-900;
+#google-map {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
 }
+
+
+
 
 
 

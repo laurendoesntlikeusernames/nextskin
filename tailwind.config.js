@@ -10,7 +10,7 @@ module.exports = {
     './public/**/*.html',
     './src/**/*.{js,jsx,ts,tsx,vue}',
   ],
-  darkMode: false,
+  darkMode: true,
   theme: {
     colors: {
       gray:colors.gray,

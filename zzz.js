@@ -44,4 +44,12 @@ module.exports = {
     },
   },
   plugins: [],
-}
+  body.is-map > #__next > .navbar {
+    display: none;
+  }
+  
+  body.is-map > #__next > .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 !important;
+  }

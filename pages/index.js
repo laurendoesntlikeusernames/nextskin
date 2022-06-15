@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
-import {loremIpsum} from  '../text.js'
 
 export default function Home({ isConnected }) {
   return (
@@ -9,20 +8,18 @@ export default function Home({ isConnected }) {
         <title>Maps, Map, Map</title>
       </Head>
       <main>
-      <section className="bg-white border-b py-8">
+      <section className="bg-white py-8 min-h-screen border-red-500">
       <div className="container max-w-5xl mx-auto m-8">
-        <h1 className="w-full text-5xl font-bold leading-tight text-center border border-red-900">
+        <h1 className="w-full font-bold leading-tight text-center text-5xl">
           This is The Mother Forager 
         </h1>
 
         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
           <div className="w-full sm:w-1/2 p-6 mt-6 border">
-
+            Map
           </div>
           <div className="w-full sm:w-1/2 p-6 mt-6 border">
-            <div className="align-middle">
-                <h2>Hello 2</h2>
-            </div>
+                <h2>Form</h2>
           </div>
         </div>
       </div>
