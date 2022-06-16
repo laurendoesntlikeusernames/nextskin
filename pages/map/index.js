@@ -6,12 +6,56 @@ class Map extends React.Component {
       lat: -32.0525256,
       lng: 115.7384503,
     },
+    markers: [
+        {
+          lat: -32.0477028,
+          lng: 115.7517936,
+        },
+        {
+          lat: -32.0517913,
+          lng: 115.7432879,
+        },
+        {
+          lat: -32.0598003,
+          lng: 115.7494265,
+        },
+        {
+          lat: -32.0541437,
+          lng: 115.7379749,
+        },
+        {
+          lat: -32.0592819,
+          lng: 115.7422008,
+        },
+      ],
   };
 
   componentDidMount() {
     document.body.classList.add("is-map");
     this.handleAttachGoogleMap();
+
+    setTimeout(() => {
+        this.handleDrawMarkers();
+      }, 2000);
   }
+
+  handleDrawMarkers = () => {
+
+  const { markers } = this.state;
+  const bounds = new google.maps.LatLngBounds();
+
+  markers.forEach((marker) => {
+    new google.maps.Marker({
+      position: marker,
+      map: this.map,
+    });
+
+    bounds.extend(marker);
+  });
+
+  this.map.fitBounds(bounds);
+  this.map.panToBounds(bounds);
+};
 
   componentWillUnmount() { '' }
 
@@ -26,7 +70,7 @@ class Map extends React.Component {
   render() {
     return (
  
-       <div className="container">
+       <div className="container mx-auto">
          <div id="google-map" />
        </div>
      
