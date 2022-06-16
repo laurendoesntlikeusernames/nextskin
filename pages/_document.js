@@ -1,21 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Nav from '../components/nav'
 import settings from "../settings";
-
 
 export default function Document() {
   return (
     <Html>
       <Head>  
-        <link rel="icon" href="/favicon.ico" />
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-        <script
-            src={`https://maps.googleapis.com/maps/api/js?key=${settings?.googleMaps?.apiKey}&callback=initMap&libraries=&v=weekly`}
-            async
-          ></script>
+        <script async defer src={`https://maps.googleapis.com/maps/api/js?key=${settings?.googleMaps?.apiKey}&callback=initMap&libraries=&v=weekly`}></script>
       </Head>
       <body className=''>
-         <Nav />
          <div className='pt-24 pl-35'>
           <Main />
          </div>
@@ -24,7 +17,7 @@ export default function Document() {
             <div className="grid justify-items-center">
                 <a href="#" target="_blank" rel="noopener noreferrer" style={{display: "flex",}} >
                     <p className='text-sm' style={{fontWeight: 'bold'}} >Powered by&nbsp;</p>
-                    <img src="/spaghetti-ink.png" alt="Vercel Logo" className="logo"  style={{width:"23px",}}/>
+                    <img src="/spaghetti-ink.png" alt="Spaghetti INK Logo" className="logo"  style={{width:"23px",}}/>
                     <p className='text-sm' style={{fontWeight: 'bold'}}>&nbsp;Spaghetti INK</p> 
                 </a>
             </div>

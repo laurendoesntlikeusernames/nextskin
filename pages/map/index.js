@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head'
 
 class Map extends React.Component {
   state = {
@@ -31,8 +32,7 @@ class Map extends React.Component {
   };
 
   componentDidMount() {
-    document.body.classList.add("is-map");
-    this.handleAttachGoogleMap();
+    this.initMap();
 
     setTimeout(() => {
         this.handleDrawMarkers();
@@ -57,9 +57,9 @@ class Map extends React.Component {
   this.map.panToBounds(bounds);
 };
 
-  componentWillUnmount() { '' }
+  componentWillUnmount() {  }
 
-  handleAttachGoogleMap = () => {
+  initMap = () => {
     const { defaultCenter } = this.state;
     this.map = new google.maps.Map(document.getElementById("google-map"), {
       center: defaultCenter,
@@ -69,11 +69,16 @@ class Map extends React.Component {
 
   render() {
     return (
- 
-       <div className="container mx-auto">
+
+<>
+    <Head>
+        <title>The Map Page</title>
+    </Head>
+      <div className="container mx-auto">
          <div id="google-map" />
        </div>
-     
+        
+</>
     );
   }
 }
